@@ -22,16 +22,16 @@ import 'imports?jQuery=jquery!./plugin.js';
 
 
 const div  = document.createElement('div');
-div.innerHTML = '<h1>Hello World</h1>';
+div.innerHTML = '<h1>Hello World!</h1>';
 document.body.appendChild(div);
 div.appendChild(generateText());
 
 const myPromise = Promise.resolve(42);
 myPromise.then((number) => {
-  const testArrStr = _.map([1, 2, 3], function(n) { return n * 3; }).toString();
+  /*const testArrStr = _.map([1, 2, 3], function(n) { return n * 3; }).toString();*/
   const currentTime = moment().format();
   //testing template strings
-  $('body').append(`<p> promise result is ${number}, now is ${currentTime}, lodash result is ${testArrStr}`);
+  $('body').append(`<p> promise result is: --- ${number}, now is ${currentTime}, lodash result is 111`);
   //call our jquery plugin!
   $('p').greenify();
 });
